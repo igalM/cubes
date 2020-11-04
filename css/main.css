@@ -1,0 +1,320 @@
+html {
+  height: 100vh;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.ham {
+  z-index: 1000;
+  position: relative;
+  top: 10px;
+  left: 7px;
+  width: 36px;
+  height: 40px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-image: url("../images/hamburger-icon.png");
+  background-size: 100%;
+}
+.ham.showClose {
+  background-image: url("../images/close-icon.png");
+}
+
+.page .menu {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  background-color: #dddddf;
+}
+.page .menu.showNav {
+  display: flex !important;
+}
+.page .menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 500px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.page .menu ul li {
+  color: #000000;
+}
+.page .menu ul li a {
+  text-decoration: none;
+  color: #000000;
+  padding: 5px 25px;
+  border-right: 1px solid black;
+  text-align: center;
+}
+.page .menu ul li .no-border {
+  border-right: none;
+}
+.page .textBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+.page h2 {
+  font-size: 4vw;
+}
+.page .bottom,
+.page .top {
+  height: calc(50vh - 25px);
+}
+.page .row {
+  display: flex;
+}
+.page .row.column {
+  flex-direction: column;
+}
+.page .row .width-100 {
+  width: 100%;
+}
+.page .row.width-80 {
+  width: 80%;
+}
+.page .row.width-20 {
+  width: 20%;
+}
+.page .row.height-50 {
+  height: 50%;
+}
+.page .pair {
+  margin: 8px;
+  display: flex;
+}
+.page .pair.width-100 {
+  width: 100%;
+}
+.page .pair.width-100 .box {
+  width: 100%;
+}
+.page .pair.width-75 {
+  width: 75%;
+}
+.page .pair.width-50 {
+  width: 50%;
+}
+.page .pair.width-25 {
+  width: 25%;
+}
+.page .pair.width-25 .box {
+  width: 100%;
+}
+.page .pair.column {
+  flex-direction: column;
+}
+.page .pair.flex-end {
+  justify-content: flex-end;
+}
+.page .pair .box {
+  width: 50%;
+  height: 100%;
+}
+.page .pair .box.red {
+  background-color: #fe0000;
+}
+.page .pair .box.black {
+  background-color: #000000;
+}
+.page .pair .box.darkBlue {
+  background-color: #1a247b;
+}
+.page .pair .box.lightBlue {
+  background-color: #0d62b3;
+}
+.page .pair .box.teal {
+  background-color: #63c2c8;
+}
+@media (min-width: 1025px) {
+  .page .ham {
+    display: none;
+  }
+  .page .desktopHidden {
+    display: none !important;
+  }
+}
+@media (max-width: 1024px) {
+  .page .flex-end {
+    display: none !important;
+  }
+  .page .menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #dddddfeb;
+    width: 40%;
+    height: 100vh;
+    overflow: hidden;
+    display: none;
+    transition: transform 0.2s ease;
+  }
+  .page .menu ul {
+    flex-direction: column;
+    padding-top: 70px;
+    font-size: 18px;
+    width: 100%;
+    justify-content: unset;
+    align-items: unset;
+  }
+  .page .menu ul li {
+    padding: 15px 0;
+    border-top: 1px solid black;
+  }
+  .page .menu ul li a {
+    border: none;
+  }
+  .page .menu ul li.border-bottom {
+    border-bottom: 1px solid black;
+  }
+  .page .top {
+    height: calc(40vh - 25px);
+  }
+  .page .top .width-20 {
+    width: 26%;
+  }
+  .page .top .width-20 .pair .box:nth-child(1) {
+    background-color: #fe0000;
+  }
+  .page .top .width-80 {
+    width: 74%;
+    flex-direction: row;
+  }
+  .page .top .width-80 .height-50:nth-child(1) {
+    height: 100%;
+    width: 33%;
+  }
+  .page .top .width-80 .height-50:nth-child(1) .mobileHidden {
+    display: none;
+  }
+  .page .top .width-80 .height-50:nth-child(1) .pair {
+    width: 100%;
+    flex-direction: column-reverse;
+  }
+  .page .top .width-80 .height-50:nth-child(1) .pair .box {
+    width: 100%;
+  }
+  .page .top .width-80 .height-50:nth-child(2) {
+    height: 100%;
+    width: 67%;
+  }
+  .page .top .width-80 .height-50:nth-child(2) .width-75 {
+    flex-direction: column;
+    width: 100%;
+  }
+  .page .top .width-80 .height-50:nth-child(2) .width-75 .pair {
+    width: 100%;
+    height: 50%;
+    margin: 0;
+  }
+  .page .top .width-80 .height-50:nth-child(2) .width-75 .textBox {
+    height: 50%;
+  }
+  .page .bottom {
+    flex-direction: column-reverse;
+    height: calc(60vh - 25px);
+  }
+  .page .bottom .width-80 {
+    width: 100%;
+    height: 67%;
+  }
+  .page .bottom .width-80 .height-50:nth-child(1) {
+    flex-direction: row-reverse;
+  }
+  .page .bottom .width-80 .height-50:nth-child(1) .pair:nth-child(2) {
+    flex-direction: row-reverse;
+  }
+  .page .bottom .width-80 .height-50:nth-child(2) .pair:nth-child(1) {
+    flex-direction: row-reverse;
+  }
+  .page .bottom .width-20 {
+    width: 100%;
+    height: 33%;
+    flex-direction: row-reverse;
+  }
+  .page .bottom .width-20 .pair.column {
+    flex-direction: row;
+  }
+}
+@media (max-width: 500px) {
+  .page .menu {
+    width: 100%;
+  }
+  .page .textBox {
+    display: none;
+  }
+  .page .pair {
+    margin: 8px 0;
+  }
+  .page .top {
+    flex-direction: column;
+  }
+  .page .top .width-20 {
+    width: 100%;
+    height: 50%;
+  }
+  .page .top .width-20 .pair .box:nth-child(1) {
+    height: 65%;
+  }
+  .page .top .width-20 .pair .box:nth-child(2) {
+    height: 35%;
+  }
+  .page .top .width-80 {
+    width: 100%;
+    height: 50%;
+    flex-direction: column;
+  }
+  .page .top .width-80 .height-50:nth-child(1) {
+    width: 100%;
+    height: 50%;
+  }
+  .page .top .width-80 .height-50:nth-child(1) .pair {
+    flex-direction: row-reverse;
+  }
+  .page .top .width-80 .height-50:nth-child(2) {
+    width: 100%;
+    height: 50%;
+  }
+  .page .top .width-80 .height-50:nth-child(2) .width-75 {
+    height: 100%;
+    margin: 0;
+  }
+  .page .top .width-80 .height-50:nth-child(2) .width-75 .pair {
+    margin: 8px 0;
+    height: 100%;
+    flex-direction: row-reverse;
+  }
+  .page .bottom .width-80 .width-50 {
+    width: 100%;
+    height: 50%;
+  }
+  .page .bottom .width-80 .height-50:nth-child(1) {
+    flex-direction: column-reverse;
+  }
+  .page .bottom .width-80 .height-50:nth-child(2) {
+    flex-direction: column;
+  }
+  .page .bottom .width-20 {
+    flex-direction: column-reverse;
+  }
+  .page .bottom .width-20 .pair:nth-child(1) {
+    flex-direction: row-reverse;
+  }
+  .page .bottom .width-20 .width-100 {
+    width: 100%;
+    height: 50%;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
